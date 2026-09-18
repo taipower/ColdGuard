@@ -22,15 +22,15 @@
 
 ```mermaid
 graph LR
-    subgraph IoT Devices (Raspberry Pi Pico W)
+    subgraph IoT_Devices ["IoT Devices (Raspberry Pi Pico W)"]
         P1(Pico W - Site 1)
         P2(Pico W - Site 2)
         PN(Pico W - Site N)
     end
 
-    Broker[MQTT Broker <br> broker.emqx.io]
-    App[Mobile Application <br> Flutter / Dart]
-    DB[(Firebase Cloud <br> Firestore Database)]
+    Broker["MQTT Broker <br> broker.emqx.io"]
+    App["Mobile Application <br> Flutter / Dart"]
+    DB[("Firebase Cloud <br> Firestore Database")]
 
     P1 -->|Publish Telemetry| Broker
     P2 -->|Publish Telemetry| Broker
@@ -63,19 +63,19 @@ graph LR
 graph TD
     Pico[Raspberry Pi Pico W]
     
-    subgraph Sensors & Display
+    subgraph Sensors_Display ["Sensors & Display"]
         DHT[DHT22 Temp/Hum Sensor]
         OLED[SSD1306 OLED Display I2C]
     end
 
-    subgraph Outputs & Alarm
+    subgraph Outputs_Alarm ["Outputs & Alarm"]
         LED_G(LED Green - NORMAL)
         LED_Y(LED Yellow - WARNING)
         LED_R(LED Red - ALARM)
         BZ[Active Buzzer - PWM]
     end
 
-    subgraph Inputs
+    subgraph Inputs_Section ["Inputs"]
         BTN[Push Button - ACK]
     end
 
